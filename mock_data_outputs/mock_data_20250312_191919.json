@@ -1,0 +1,4365 @@
+{
+  "customers": [
+    {
+      "id": "CUST0000",
+      "name": "Justin Lee",
+      "phone": "+6594610023",
+      "email": "justin@example.com",
+      "address": "Block 166, #6-29, Singapore 192241",
+      "joined_date": "2025-01-06T19:19:19.042909"
+    },
+    {
+      "id": "CUST0001",
+      "name": "Wei Ling Tan",
+      "phone": "+6583717440",
+      "email": "wei@example.com",
+      "address": "Block 345, #11-85, Singapore 912879",
+      "joined_date": "2024-06-16T19:19:19.042909"
+    },
+    {
+      "id": "CUST0002",
+      "name": "Muhammad Bin Abdullah",
+      "phone": "+6583913161",
+      "email": "muhammad@example.com",
+      "address": "Block 161, #14-79, Singapore 691449",
+      "joined_date": "2025-02-28T19:19:19.042909"
+    },
+    {
+      "id": "CUST0003",
+      "name": "Siti Binte Zainudin",
+      "phone": "+6599469115",
+      "email": "siti@example.com",
+      "address": "Block 753, #19-45, Singapore 255388",
+      "joined_date": "2024-05-15T19:19:19.042909"
+    },
+    {
+      "id": "CUST0004",
+      "name": "Raj Patel",
+      "phone": "+6586378005",
+      "email": "raj@example.com",
+      "address": "Block 140, #5-70, Singapore 473489",
+      "joined_date": "2024-10-29T19:19:19.042909"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "APT0000",
+      "customer_id": "CUST0003",
+      "customer_name": "Siti Binte Zainudin",
+      "date": "2025-03-14T19:19:19.042909",
+      "service": "Energy Audit",
+      "status": "Cancelled",
+      "location": "JTC Summit (near Jurong East MRT Station)",
+      "notes": "Smart meter installation follow-up"
+    },
+    {
+      "id": "APT0001",
+      "customer_id": "CUST0004",
+      "customer_name": "Raj Patel",
+      "date": "2025-03-22T19:19:19.042909",
+      "service": "Contract Consultation",
+      "status": "Scheduled",
+      "location": "JTC Summit (near Jurong East MRT Station)",
+      "notes": "Smart meter installation follow-up"
+    },
+    {
+      "id": "APT0002",
+      "customer_id": "CUST0004",
+      "customer_name": "Raj Patel",
+      "date": "2025-03-16T19:19:19.042909",
+      "service": "Bill Review",
+      "status": "Scheduled",
+      "location": "JTC Summit (near Jurong East MRT Station)",
+      "notes": "Solar panel installation inquiry"
+    },
+    {
+      "id": "APT0003",
+      "customer_id": "CUST0002",
+      "customer_name": "Muhammad Bin Abdullah",
+      "date": "2025-03-26T19:19:19.042909",
+      "service": "Contract Consultation",
+      "status": "Scheduled",
+      "location": "JTC Summit (near Jurong East MRT Station)",
+      "notes": "Contract renewal discussion"
+    },
+    {
+      "id": "APT0004",
+      "customer_id": "CUST0003",
+      "customer_name": "Siti Binte Zainudin",
+      "date": "2025-03-14T19:19:19.042909",
+      "service": "Bill Review",
+      "status": "Cancelled",
+      "location": "JTC Summit (near Jurong East MRT Station)",
+      "notes": "Smart meter installation follow-up"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "CONT0000",
+      "customer_id": "CUST0004",
+      "customer_name": "Raj Patel",
+      "start_date": "2024-06-01T19:19:19.042909",
+      "end_date": "2026-05-22T19:19:19.042909",
+      "term_months": 24,
+      "plan_type": "Discount Off Tariff",
+      "monthly_usage": 204.73,
+      "rate": 0.2837,
+      "status": "Renewed",
+      "auto_renewal": true,
+      "green_energy_percentage": 0,
+      "promotion_code": "LOYAL10",
+      "early_termination_fee": 160.28
+    },
+    {
+      "id": "CONT0001",
+      "customer_id": "CUST0004",
+      "customer_name": "Raj Patel",
+      "start_date": "2024-05-02T19:19:19.042909",
+      "end_date": "2025-04-27T19:19:19.042909",
+      "term_months": 12,
+      "plan_type": "Fixed Price Plan",
+      "monthly_usage": 773.44,
+      "rate": 0.2073,
+      "status": "Expired",
+      "auto_renewal": false,
+      "green_energy_percentage": 0,
+      "promotion_code": "LOYAL10",
+      "early_termination_fee": 199.09
+    },
+    {
+      "id": "CONT0002",
+      "customer_id": "CUST0002",
+      "customer_name": "Muhammad Bin Abdullah",
+      "start_date": "2024-03-24T19:19:19.042909",
+      "end_date": "2027-03-09T19:19:19.042909",
+      "term_months": 36,
+      "plan_type": "Green Energy Plan",
+      "monthly_usage": 488.15,
+      "rate": 0.2574,
+      "status": "Expired",
+      "auto_renewal": false,
+      "green_energy_percentage": 100,
+      "promotion_code": "",
+      "early_termination_fee": 147.89
+    },
+    {
+      "id": "CONT0003",
+      "customer_id": "CUST0004",
+      "customer_name": "Raj Patel",
+      "start_date": "2024-09-01T19:19:19.042909",
+      "end_date": "2025-08-27T19:19:19.042909",
+      "term_months": 12,
+      "plan_type": "Green Energy Plan",
+      "monthly_usage": 1149.35,
+      "rate": 0.1962,
+      "status": "Active",
+      "auto_renewal": false,
+      "green_energy_percentage": 100,
+      "promotion_code": "GREEN15",
+      "early_termination_fee": 127.37
+    },
+    {
+      "id": "CONT0004",
+      "customer_id": "CUST0000",
+      "customer_name": "Justin Lee",
+      "start_date": "2025-02-07T19:19:19.042909",
+      "end_date": "2028-01-23T19:19:19.042909",
+      "term_months": 36,
+      "plan_type": "Discount Off Tariff",
+      "monthly_usage": 216.5,
+      "rate": 0.267,
+      "status": "Renewed",
+      "auto_renewal": false,
+      "green_energy_percentage": 0,
+      "promotion_code": "LOYAL10",
+      "early_termination_fee": 127.03
+    },
+    {
+      "id": "CONT0005",
+      "customer_id": "CUST0001",
+      "customer_name": "Wei Ling Tan",
+      "start_date": "2024-11-16T19:19:19.042909",
+      "end_date": "2025-05-15T19:19:19.042909",
+      "term_months": 6,
+      "plan_type": "Peak/Off-Peak Plan",
+      "monthly_usage": 951.03,
+      "rate": 0.2211,
+      "status": "Pending",
+      "auto_renewal": false,
+      "green_energy_percentage": 50,
+      "promotion_code": "",
+      "early_termination_fee": 76.46
+    },
+    {
+      "id": "CONT0006",
+      "customer_id": "CUST0001",
+      "customer_name": "Wei Ling Tan",
+      "start_date": "2024-07-10T19:19:19.042909",
+      "end_date": "2026-06-30T19:19:19.042909",
+      "term_months": 24,
+      "plan_type": "Peak/Off-Peak Plan",
+      "monthly_usage": 734.38,
+      "rate": 0.2044,
+      "status": "Active",
+      "auto_renewal": true,
+      "green_energy_percentage": 0,
+      "promotion_code": "WELCOME20",
+      "early_termination_fee": 133.08
+    },
+    {
+      "id": "CONT0007",
+      "customer_id": "CUST0001",
+      "customer_name": "Wei Ling Tan",
+      "start_date": "2024-10-23T19:19:19.042909",
+      "end_date": "2025-04-21T19:19:19.042909",
+      "term_months": 6,
+      "plan_type": "Discount Off Tariff",
+      "monthly_usage": 650.87,
+      "rate": 0.2867,
+      "status": "Pending",
+      "auto_renewal": false,
+      "green_energy_percentage": 50,
+      "promotion_code": "",
+      "early_termination_fee": 74.44
+    },
+    {
+      "id": "CONT0008",
+      "customer_id": "CUST0004",
+      "customer_name": "Raj Patel",
+      "start_date": "2024-06-07T19:19:19.042909",
+      "end_date": "2026-05-28T19:19:19.042909",
+      "term_months": 24,
+      "plan_type": "Green Energy Plan",
+      "monthly_usage": 269.96,
+      "rate": 0.2326,
+      "status": "Renewed",
+      "auto_renewal": false,
+      "green_energy_percentage": 100,
+      "promotion_code": "",
+      "early_termination_fee": 59.4
+    },
+    {
+      "id": "CONT0009",
+      "customer_id": "CUST0003",
+      "customer_name": "Siti Binte Zainudin",
+      "start_date": "2024-08-02T19:19:19.042909",
+      "end_date": "2026-07-23T19:19:19.042909",
+      "term_months": 24,
+      "plan_type": "Green Energy Plan",
+      "monthly_usage": 687.87,
+      "rate": 0.2386,
+      "status": "Expired",
+      "auto_renewal": true,
+      "green_energy_percentage": 100,
+      "promotion_code": "",
+      "early_termination_fee": 176.77
+    }
+  ],
+  "billing_history": [
+    {
+      "id": "BILL0000",
+      "contract_id": "CONT0000",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 166.28,
+      "energy_charge": 47.17,
+      "transmission_fee": 8.31,
+      "gst": 4.44,
+      "discount": 5.99,
+      "total_amount": 53.93,
+      "status": "Overdue",
+      "payment_date": "2025-03-26T19:19:19.042909"
+    },
+    {
+      "id": "BILL0001",
+      "contract_id": "CONT0000",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 181.79,
+      "energy_charge": 51.57,
+      "transmission_fee": 9.09,
+      "gst": 4.85,
+      "discount": 6.55,
+      "total_amount": 58.96,
+      "status": "Overdue",
+      "payment_date": "2025-02-22T19:19:19.042909"
+    },
+    {
+      "id": "BILL0002",
+      "contract_id": "CONT0000",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 250.68,
+      "energy_charge": 71.12,
+      "transmission_fee": 12.53,
+      "gst": 6.69,
+      "discount": 9.03,
+      "total_amount": 81.31,
+      "status": "Unpaid",
+      "payment_date": "2025-01-20T19:19:19.042909"
+    },
+    {
+      "id": "BILL0003",
+      "contract_id": "CONT0000",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 143.19,
+      "energy_charge": 40.62,
+      "transmission_fee": 7.16,
+      "gst": 3.82,
+      "discount": 5.16,
+      "total_amount": 46.44,
+      "status": "Paid",
+      "payment_date": "2024-12-22T19:19:19.042909"
+    },
+    {
+      "id": "BILL0004",
+      "contract_id": "CONT0000",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-11-12T19:19:19.042909",
+      "due_date": "2024-12-03T19:19:19.042909",
+      "billing_period_start": "2024-10-13T19:19:19.042909",
+      "billing_period_end": "2024-11-12T19:19:19.042909",
+      "usage_kwh": 220.79,
+      "energy_charge": 62.64,
+      "transmission_fee": 11.04,
+      "gst": 5.89,
+      "discount": 7.96,
+      "total_amount": 71.61,
+      "status": "Overdue",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0005",
+      "contract_id": "CONT0000",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-10-13T19:19:19.042909",
+      "due_date": "2024-11-03T19:19:19.042909",
+      "billing_period_start": "2024-09-13T19:19:19.042909",
+      "billing_period_end": "2024-10-13T19:19:19.042909",
+      "usage_kwh": 247.87,
+      "energy_charge": 70.32,
+      "transmission_fee": 12.39,
+      "gst": 6.62,
+      "discount": 8.93,
+      "total_amount": 80.4,
+      "status": "Overdue",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0006",
+      "contract_id": "CONT0001",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 603.45,
+      "energy_charge": 125.09,
+      "transmission_fee": 30.17,
+      "gst": 12.42,
+      "discount": 16.77,
+      "total_amount": 150.92,
+      "status": "Unpaid",
+      "payment_date": "2025-03-25T19:19:19.042909"
+    },
+    {
+      "id": "BILL0007",
+      "contract_id": "CONT0001",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 655.28,
+      "energy_charge": 135.84,
+      "transmission_fee": 32.76,
+      "gst": 13.49,
+      "discount": 18.21,
+      "total_amount": 163.88,
+      "status": "Overdue",
+      "payment_date": "2025-02-24T19:19:19.042909"
+    },
+    {
+      "id": "BILL0008",
+      "contract_id": "CONT0001",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 967.6,
+      "energy_charge": 200.58,
+      "transmission_fee": 48.38,
+      "gst": 19.92,
+      "discount": 26.89,
+      "total_amount": 241.99,
+      "status": "Paid",
+      "payment_date": "2025-01-25T19:19:19.042909"
+    },
+    {
+      "id": "BILL0009",
+      "contract_id": "CONT0001",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 703.95,
+      "energy_charge": 145.93,
+      "transmission_fee": 35.2,
+      "gst": 14.49,
+      "discount": 19.56,
+      "total_amount": 176.05,
+      "status": "Overdue",
+      "payment_date": "2024-12-13T19:19:19.042909"
+    },
+    {
+      "id": "BILL0010",
+      "contract_id": "CONT0001",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-11-12T19:19:19.042909",
+      "due_date": "2024-12-03T19:19:19.042909",
+      "billing_period_start": "2024-10-13T19:19:19.042909",
+      "billing_period_end": "2024-11-12T19:19:19.042909",
+      "usage_kwh": 715.12,
+      "energy_charge": 148.24,
+      "transmission_fee": 35.76,
+      "gst": 14.72,
+      "discount": 19.87,
+      "total_amount": 178.85,
+      "status": "Paid",
+      "payment_date": "2024-11-26T19:19:19.042909"
+    },
+    {
+      "id": "BILL0011",
+      "contract_id": "CONT0001",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-10-13T19:19:19.042909",
+      "due_date": "2024-11-03T19:19:19.042909",
+      "billing_period_start": "2024-09-13T19:19:19.042909",
+      "billing_period_end": "2024-10-13T19:19:19.042909",
+      "usage_kwh": 885.2,
+      "energy_charge": 183.5,
+      "transmission_fee": 44.26,
+      "gst": 18.22,
+      "discount": 24.6,
+      "total_amount": 221.38,
+      "status": "Unpaid",
+      "payment_date": "2024-10-30T19:19:19.042909"
+    },
+    {
+      "id": "BILL0012",
+      "contract_id": "CONT0002",
+      "customer_id": "CUST0002",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 323.67,
+      "energy_charge": 83.31,
+      "transmission_fee": 16.18,
+      "gst": 7.96,
+      "discount": 0,
+      "total_amount": 107.46,
+      "status": "Overdue",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0013",
+      "contract_id": "CONT0002",
+      "customer_id": "CUST0002",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 405.93,
+      "energy_charge": 104.49,
+      "transmission_fee": 20.3,
+      "gst": 9.98,
+      "discount": 0,
+      "total_amount": 134.76,
+      "status": "Unpaid",
+      "payment_date": "2025-02-16T19:19:19.042909"
+    },
+    {
+      "id": "BILL0014",
+      "contract_id": "CONT0002",
+      "customer_id": "CUST0002",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 594.19,
+      "energy_charge": 152.94,
+      "transmission_fee": 29.71,
+      "gst": 14.61,
+      "discount": 0,
+      "total_amount": 197.27,
+      "status": "Unpaid",
+      "payment_date": "2025-01-16T19:19:19.042909"
+    },
+    {
+      "id": "BILL0015",
+      "contract_id": "CONT0002",
+      "customer_id": "CUST0002",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 332.07,
+      "energy_charge": 85.48,
+      "transmission_fee": 16.6,
+      "gst": 8.17,
+      "discount": 0,
+      "total_amount": 110.25,
+      "status": "Unpaid",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0016",
+      "contract_id": "CONT0002",
+      "customer_id": "CUST0002",
+      "bill_date": "2024-11-12T19:19:19.042909",
+      "due_date": "2024-12-03T19:19:19.042909",
+      "billing_period_start": "2024-10-13T19:19:19.042909",
+      "billing_period_end": "2024-11-12T19:19:19.042909",
+      "usage_kwh": 436.99,
+      "energy_charge": 112.48,
+      "transmission_fee": 21.85,
+      "gst": 10.75,
+      "discount": 0,
+      "total_amount": 145.08,
+      "status": "Unpaid",
+      "payment_date": "2024-11-15T19:19:19.042909"
+    },
+    {
+      "id": "BILL0017",
+      "contract_id": "CONT0002",
+      "customer_id": "CUST0002",
+      "bill_date": "2024-10-13T19:19:19.042909",
+      "due_date": "2024-11-03T19:19:19.042909",
+      "billing_period_start": "2024-09-13T19:19:19.042909",
+      "billing_period_end": "2024-10-13T19:19:19.042909",
+      "usage_kwh": 530.67,
+      "energy_charge": 136.59,
+      "transmission_fee": 26.53,
+      "gst": 13.05,
+      "discount": 0,
+      "total_amount": 176.18,
+      "status": "Overdue",
+      "payment_date": "2024-10-20T19:19:19.042909"
+    },
+    {
+      "id": "BILL0018",
+      "contract_id": "CONT0003",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 1063.45,
+      "energy_charge": 208.65,
+      "transmission_fee": 53.17,
+      "gst": 20.95,
+      "discount": 42.42,
+      "total_amount": 240.35,
+      "status": "Overdue",
+      "payment_date": "2025-03-29T19:19:19.042909"
+    },
+    {
+      "id": "BILL0019",
+      "contract_id": "CONT0003",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 1017.75,
+      "energy_charge": 199.68,
+      "transmission_fee": 50.89,
+      "gst": 20.05,
+      "discount": 40.59,
+      "total_amount": 230.02,
+      "status": "Paid",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0020",
+      "contract_id": "CONT0003",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 1459.75,
+      "energy_charge": 286.4,
+      "transmission_fee": 72.99,
+      "gst": 28.75,
+      "discount": 58.22,
+      "total_amount": 329.92,
+      "status": "Overdue",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0021",
+      "contract_id": "CONT0003",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 746.5,
+      "energy_charge": 146.46,
+      "transmission_fee": 37.32,
+      "gst": 14.7,
+      "discount": 29.77,
+      "total_amount": 168.72,
+      "status": "Overdue",
+      "payment_date": "2024-12-22T19:19:19.042909"
+    },
+    {
+      "id": "BILL0022",
+      "contract_id": "CONT0003",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-11-12T19:19:19.042909",
+      "due_date": "2024-12-03T19:19:19.042909",
+      "billing_period_start": "2024-10-13T19:19:19.042909",
+      "billing_period_end": "2024-11-12T19:19:19.042909",
+      "usage_kwh": 1016.09,
+      "energy_charge": 199.36,
+      "transmission_fee": 50.8,
+      "gst": 20.01,
+      "discount": 40.53,
+      "total_amount": 229.65,
+      "status": "Unpaid",
+      "payment_date": "2024-11-20T19:19:19.042909"
+    },
+    {
+      "id": "BILL0023",
+      "contract_id": "CONT0003",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-10-13T19:19:19.042909",
+      "due_date": "2024-11-03T19:19:19.042909",
+      "billing_period_start": "2024-09-13T19:19:19.042909",
+      "billing_period_end": "2024-10-13T19:19:19.042909",
+      "usage_kwh": 1491.7,
+      "energy_charge": 292.67,
+      "transmission_fee": 74.58,
+      "gst": 29.38,
+      "discount": 59.5,
+      "total_amount": 337.14,
+      "status": "Unpaid",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0024",
+      "contract_id": "CONT0004",
+      "customer_id": "CUST0000",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 204.04,
+      "energy_charge": 54.48,
+      "transmission_fee": 10.2,
+      "gst": 5.17,
+      "discount": 6.99,
+      "total_amount": 62.87,
+      "status": "Overdue",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0025",
+      "contract_id": "CONT0004",
+      "customer_id": "CUST0000",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 199.37,
+      "energy_charge": 53.23,
+      "transmission_fee": 9.97,
+      "gst": 5.06,
+      "discount": 6.83,
+      "total_amount": 61.43,
+      "status": "Paid",
+      "payment_date": "2025-02-26T19:19:19.042909"
+    },
+    {
+      "id": "BILL0026",
+      "contract_id": "CONT0005",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 654.58,
+      "energy_charge": 144.73,
+      "transmission_fee": 32.73,
+      "gst": 14.2,
+      "discount": 0,
+      "total_amount": 191.65,
+      "status": "Overdue",
+      "payment_date": "2025-03-30T19:19:19.042909"
+    },
+    {
+      "id": "BILL0027",
+      "contract_id": "CONT0005",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 986.19,
+      "energy_charge": 218.05,
+      "transmission_fee": 49.31,
+      "gst": 21.39,
+      "discount": 0,
+      "total_amount": 288.75,
+      "status": "Paid",
+      "payment_date": "2025-02-17T19:19:19.042909"
+    },
+    {
+      "id": "BILL0028",
+      "contract_id": "CONT0005",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 1353.65,
+      "energy_charge": 299.29,
+      "transmission_fee": 67.68,
+      "gst": 29.36,
+      "discount": 0,
+      "total_amount": 396.33,
+      "status": "Unpaid",
+      "payment_date": "2025-01-18T19:19:19.042909"
+    },
+    {
+      "id": "BILL0029",
+      "contract_id": "CONT0005",
+      "customer_id": "CUST0001",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 796.11,
+      "energy_charge": 176.02,
+      "transmission_fee": 39.81,
+      "gst": 17.27,
+      "discount": 0,
+      "total_amount": 233.09,
+      "status": "Unpaid",
+      "payment_date": "2024-12-22T19:19:19.042909"
+    },
+    {
+      "id": "BILL0030",
+      "contract_id": "CONT0006",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 621.62,
+      "energy_charge": 127.06,
+      "transmission_fee": 31.08,
+      "gst": 12.65,
+      "discount": 34.16,
+      "total_amount": 136.63,
+      "status": "Overdue",
+      "payment_date": "2025-03-31T19:19:19.042909"
+    },
+    {
+      "id": "BILL0031",
+      "contract_id": "CONT0006",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 596.78,
+      "energy_charge": 121.98,
+      "transmission_fee": 29.84,
+      "gst": 12.15,
+      "discount": 32.79,
+      "total_amount": 131.17,
+      "status": "Unpaid",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0032",
+      "contract_id": "CONT0006",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 791.29,
+      "energy_charge": 161.74,
+      "transmission_fee": 39.56,
+      "gst": 16.1,
+      "discount": 43.48,
+      "total_amount": 173.93,
+      "status": "Overdue",
+      "payment_date": "2025-01-12T19:19:19.042909"
+    },
+    {
+      "id": "BILL0033",
+      "contract_id": "CONT0006",
+      "customer_id": "CUST0001",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 579.57,
+      "energy_charge": 118.46,
+      "transmission_fee": 28.98,
+      "gst": 11.8,
+      "discount": 31.85,
+      "total_amount": 127.39,
+      "status": "Paid",
+      "payment_date": "2024-12-26T19:19:19.042909"
+    },
+    {
+      "id": "BILL0034",
+      "contract_id": "CONT0006",
+      "customer_id": "CUST0001",
+      "bill_date": "2024-11-12T19:19:19.042909",
+      "due_date": "2024-12-03T19:19:19.042909",
+      "billing_period_start": "2024-10-13T19:19:19.042909",
+      "billing_period_end": "2024-11-12T19:19:19.042909",
+      "usage_kwh": 724.18,
+      "energy_charge": 148.02,
+      "transmission_fee": 36.21,
+      "gst": 14.74,
+      "discount": 39.79,
+      "total_amount": 159.18,
+      "status": "Unpaid",
+      "payment_date": "2024-11-15T19:19:19.042909"
+    },
+    {
+      "id": "BILL0035",
+      "contract_id": "CONT0006",
+      "customer_id": "CUST0001",
+      "bill_date": "2024-10-13T19:19:19.042909",
+      "due_date": "2024-11-03T19:19:19.042909",
+      "billing_period_start": "2024-09-13T19:19:19.042909",
+      "billing_period_end": "2024-10-13T19:19:19.042909",
+      "usage_kwh": 761.45,
+      "energy_charge": 155.64,
+      "transmission_fee": 38.07,
+      "gst": 15.5,
+      "discount": 41.84,
+      "total_amount": 167.37,
+      "status": "Unpaid",
+      "payment_date": "2024-10-23T19:19:19.042909"
+    },
+    {
+      "id": "BILL0036",
+      "contract_id": "CONT0007",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 622.83,
+      "energy_charge": 178.56,
+      "transmission_fee": 31.14,
+      "gst": 16.78,
+      "discount": 0,
+      "total_amount": 226.48,
+      "status": "Overdue",
+      "payment_date": "2025-03-16T19:19:19.042909"
+    },
+    {
+      "id": "BILL0037",
+      "contract_id": "CONT0007",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 673.46,
+      "energy_charge": 193.08,
+      "transmission_fee": 33.67,
+      "gst": 18.14,
+      "discount": 0,
+      "total_amount": 244.89,
+      "status": "Overdue",
+      "payment_date": "2025-02-15T19:19:19.042909"
+    },
+    {
+      "id": "BILL0038",
+      "contract_id": "CONT0007",
+      "customer_id": "CUST0001",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 845.79,
+      "energy_charge": 242.49,
+      "transmission_fee": 42.29,
+      "gst": 22.78,
+      "discount": 0,
+      "total_amount": 307.56,
+      "status": "Paid",
+      "payment_date": "2025-01-31T19:19:19.042909"
+    },
+    {
+      "id": "BILL0039",
+      "contract_id": "CONT0007",
+      "customer_id": "CUST0001",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 599.77,
+      "energy_charge": 171.95,
+      "transmission_fee": 29.99,
+      "gst": 16.16,
+      "discount": 0,
+      "total_amount": 218.1,
+      "status": "Overdue",
+      "payment_date": "2024-12-26T19:19:19.042909"
+    },
+    {
+      "id": "BILL0040",
+      "contract_id": "CONT0007",
+      "customer_id": "CUST0001",
+      "bill_date": "2024-11-12T19:19:19.042909",
+      "due_date": "2024-12-03T19:19:19.042909",
+      "billing_period_start": "2024-10-13T19:19:19.042909",
+      "billing_period_end": "2024-11-12T19:19:19.042909",
+      "usage_kwh": 745.89,
+      "energy_charge": 213.85,
+      "transmission_fee": 37.29,
+      "gst": 20.09,
+      "discount": 0,
+      "total_amount": 271.23,
+      "status": "Overdue",
+      "payment_date": "2024-11-16T19:19:19.042909"
+    },
+    {
+      "id": "BILL0041",
+      "contract_id": "CONT0008",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 174.35,
+      "energy_charge": 40.55,
+      "transmission_fee": 8.72,
+      "gst": 3.94,
+      "discount": 0,
+      "total_amount": 53.21,
+      "status": "Paid",
+      "payment_date": "2025-03-29T19:19:19.042909"
+    },
+    {
+      "id": "BILL0042",
+      "contract_id": "CONT0008",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 287.24,
+      "energy_charge": 66.81,
+      "transmission_fee": 14.36,
+      "gst": 6.49,
+      "discount": 0,
+      "total_amount": 87.67,
+      "status": "Overdue",
+      "payment_date": "2025-02-28T19:19:19.042909"
+    },
+    {
+      "id": "BILL0043",
+      "contract_id": "CONT0008",
+      "customer_id": "CUST0004",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 338.87,
+      "energy_charge": 78.82,
+      "transmission_fee": 16.94,
+      "gst": 7.66,
+      "discount": 0,
+      "total_amount": 103.42,
+      "status": "Overdue",
+      "payment_date": "2025-01-29T19:19:19.042909"
+    },
+    {
+      "id": "BILL0044",
+      "contract_id": "CONT0008",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 190.1,
+      "energy_charge": 44.22,
+      "transmission_fee": 9.51,
+      "gst": 4.3,
+      "discount": 0,
+      "total_amount": 58.02,
+      "status": "Overdue",
+      "payment_date": "2024-12-21T19:19:19.042909"
+    },
+    {
+      "id": "BILL0045",
+      "contract_id": "CONT0008",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-11-12T19:19:19.042909",
+      "due_date": "2024-12-03T19:19:19.042909",
+      "billing_period_start": "2024-10-13T19:19:19.042909",
+      "billing_period_end": "2024-11-12T19:19:19.042909",
+      "usage_kwh": 233.2,
+      "energy_charge": 54.24,
+      "transmission_fee": 11.66,
+      "gst": 5.27,
+      "discount": 0,
+      "total_amount": 71.17,
+      "status": "Paid",
+      "payment_date": "2024-11-20T19:19:19.042909"
+    },
+    {
+      "id": "BILL0046",
+      "contract_id": "CONT0008",
+      "customer_id": "CUST0004",
+      "bill_date": "2024-10-13T19:19:19.042909",
+      "due_date": "2024-11-03T19:19:19.042909",
+      "billing_period_start": "2024-09-13T19:19:19.042909",
+      "billing_period_end": "2024-10-13T19:19:19.042909",
+      "usage_kwh": 348.68,
+      "energy_charge": 81.1,
+      "transmission_fee": 17.43,
+      "gst": 7.88,
+      "discount": 0,
+      "total_amount": 106.42,
+      "status": "Overdue",
+      "payment_date": "2024-10-21T19:19:19.042909"
+    },
+    {
+      "id": "BILL0047",
+      "contract_id": "CONT0009",
+      "customer_id": "CUST0003",
+      "bill_date": "2025-03-12T19:19:19.042909",
+      "due_date": "2025-04-02T19:19:19.042909",
+      "billing_period_start": "2025-02-10T19:19:19.042909",
+      "billing_period_end": "2025-03-12T19:19:19.042909",
+      "usage_kwh": 582.35,
+      "energy_charge": 138.95,
+      "transmission_fee": 29.12,
+      "gst": 13.45,
+      "discount": 0,
+      "total_amount": 181.51,
+      "status": "Overdue",
+      "payment_date": "2025-03-26T19:19:19.042909"
+    },
+    {
+      "id": "BILL0048",
+      "contract_id": "CONT0009",
+      "customer_id": "CUST0003",
+      "bill_date": "2025-02-10T19:19:19.042909",
+      "due_date": "2025-03-03T19:19:19.042909",
+      "billing_period_start": "2025-01-11T19:19:19.042909",
+      "billing_period_end": "2025-02-10T19:19:19.042909",
+      "usage_kwh": 554.5,
+      "energy_charge": 132.3,
+      "transmission_fee": 27.73,
+      "gst": 12.8,
+      "discount": 0,
+      "total_amount": 172.83,
+      "status": "Overdue",
+      "payment_date": "2025-02-11T19:19:19.042909"
+    },
+    {
+      "id": "BILL0049",
+      "contract_id": "CONT0009",
+      "customer_id": "CUST0003",
+      "bill_date": "2025-01-11T19:19:19.042909",
+      "due_date": "2025-02-01T19:19:19.042909",
+      "billing_period_start": "2024-12-12T19:19:19.042909",
+      "billing_period_end": "2025-01-11T19:19:19.042909",
+      "usage_kwh": 756.34,
+      "energy_charge": 180.46,
+      "transmission_fee": 37.82,
+      "gst": 17.46,
+      "discount": 0,
+      "total_amount": 235.74,
+      "status": "Overdue",
+      "payment_date": "2025-01-19T19:19:19.042909"
+    },
+    {
+      "id": "BILL0050",
+      "contract_id": "CONT0009",
+      "customer_id": "CUST0003",
+      "bill_date": "2024-12-12T19:19:19.042909",
+      "due_date": "2025-01-02T19:19:19.042909",
+      "billing_period_start": "2024-11-12T19:19:19.042909",
+      "billing_period_end": "2024-12-12T19:19:19.042909",
+      "usage_kwh": 593.78,
+      "energy_charge": 141.67,
+      "transmission_fee": 29.69,
+      "gst": 13.71,
+      "discount": 0,
+      "total_amount": 185.07,
+      "status": "Paid",
+      "payment_date": null
+    },
+    {
+      "id": "BILL0051",
+      "contract_id": "CONT0009",
+      "customer_id": "CUST0003",
+      "bill_date": "2024-11-12T19:19:19.042909",
+      "due_date": "2024-12-03T19:19:19.042909",
+      "billing_period_start": "2024-10-13T19:19:19.042909",
+      "billing_period_end": "2024-11-12T19:19:19.042909",
+      "usage_kwh": 774.24,
+      "energy_charge": 184.73,
+      "transmission_fee": 38.71,
+      "gst": 17.88,
+      "discount": 0,
+      "total_amount": 241.32,
+      "status": "Paid",
+      "payment_date": "2024-11-20T19:19:19.042909"
+    },
+    {
+      "id": "BILL0052",
+      "contract_id": "CONT0009",
+      "customer_id": "CUST0003",
+      "bill_date": "2024-10-13T19:19:19.042909",
+      "due_date": "2024-11-03T19:19:19.042909",
+      "billing_period_start": "2024-09-13T19:19:19.042909",
+      "billing_period_end": "2024-10-13T19:19:19.042909",
+      "usage_kwh": 831.63,
+      "energy_charge": 198.43,
+      "transmission_fee": 41.58,
+      "gst": 19.2,
+      "discount": 0,
+      "total_amount": 259.21,
+      "status": "Overdue",
+      "payment_date": "2024-11-01T19:19:19.042909"
+    }
+  ],
+  "usage_data": [
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 4.77,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 4.24,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 6.57,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 5.12,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 5.44,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 6.46,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 5.47,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 6.79,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 4.29,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 4.03,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 5.04,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 4.07,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 7.08,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 6.81,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 6.61,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 6.0,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 4.42,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 6.33,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 4.95,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 5.98,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 7.11,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 5.06,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 4.48,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 5.17,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 5.17,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 4.86,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 6.06,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 6.59,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 5.28,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0000",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 6.15,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 22.16,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 18.3,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 23.17,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 15.44,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 23.41,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 24.16,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 21.75,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 18.36,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 25.46,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 14.27,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 17.25,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 25.83,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 14.57,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 14.6,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 25.83,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 20.99,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 24.96,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 23.51,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 23.85,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 16.19,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 23.69,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 19.97,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 17.76,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 18.89,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 21.03,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 25.21,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 14.43,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 23.17,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 15.16,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0001",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 18.44,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 9.62,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.85
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 13.13,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.25
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 12.28,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.91
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 7.57,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.03
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 11.05,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.42
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 13.69,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.48
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 12.49,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.0
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 11.69,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.68
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 7.86,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.14
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 9.76,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.91
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 9.87,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.95
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 12.5,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.0
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 10.74,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.3
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 8.53,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.41
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 11.14,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.45
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 10.04,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.01
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 12.45,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.98
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 11.99,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.79
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 12.57,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.03
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 8.3,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.32
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 11.82,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.73
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 8.77,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.51
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 12.1,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.84
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 10.47,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.19
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 8.6,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.44
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 10.95,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.38
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 9.26,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.71
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 13.24,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.3
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 9.45,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.78
+    },
+    {
+      "customer_id": "CUST0002",
+      "contract_id": "CONT0002",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 13.1,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.24
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 40.94,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 16.38
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 36.27,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 14.51
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 40.4,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 16.16
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 30.95,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 12.38
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 43.61,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 17.44
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 31.21,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 12.48
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 25.3,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 10.12
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 29.97,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 11.99
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 26.13,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 10.45
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 30.51,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 12.2
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 29.73,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 11.89
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 26.04,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 10.41
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 28.52,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 11.41
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 43.72,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 17.49
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 44.99,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 17.99
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 29.49,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 11.8
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 37.03,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 14.81
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 31.26,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 12.5
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 29.14,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 11.66
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 40.15,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 16.06
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 29.61,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 11.84
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 34.21,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 13.68
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 36.78,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 14.71
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 25.16,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 10.07
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 40.42,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 16.17
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 39.82,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 15.93
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 42.45,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 16.98
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 38.49,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 15.4
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 36.62,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 14.65
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0003",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 33.05,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 13.22
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 5.22,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 8.81,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 7.93,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 5.66,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 6.07,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 8.24,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 8.55,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 5.4,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 6.75,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 5.19,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 7.5,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 5.38,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 7.13,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 4.97,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 5.5,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 5.66,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 4.76,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 5.58,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 8.0,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 6.41,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 7.94,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 7.8,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 7.61,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 6.67,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 7.82,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 6.89,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 6.78,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 8.63,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 6.5,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0000",
+      "contract_id": "CONT0004",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 6.71,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 20.24,
+      "peak_kwh": 12.14,
+      "off_peak_kwh": 8.1,
+      "carbon_offset_kg": 4.05
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 24.48,
+      "peak_kwh": 14.69,
+      "off_peak_kwh": 9.79,
+      "carbon_offset_kg": 4.9
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 15.58,
+      "peak_kwh": 9.35,
+      "off_peak_kwh": 6.23,
+      "carbon_offset_kg": 3.12
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 17.4,
+      "peak_kwh": 10.44,
+      "off_peak_kwh": 6.96,
+      "carbon_offset_kg": 3.48
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 15.65,
+      "peak_kwh": 9.39,
+      "off_peak_kwh": 6.26,
+      "carbon_offset_kg": 3.13
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 28.1,
+      "peak_kwh": 16.86,
+      "off_peak_kwh": 11.24,
+      "carbon_offset_kg": 5.62
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 24.84,
+      "peak_kwh": 14.9,
+      "off_peak_kwh": 9.94,
+      "carbon_offset_kg": 4.97
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 24.68,
+      "peak_kwh": 14.81,
+      "off_peak_kwh": 9.87,
+      "carbon_offset_kg": 4.94
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 25.52,
+      "peak_kwh": 15.31,
+      "off_peak_kwh": 10.21,
+      "carbon_offset_kg": 5.1
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 18.56,
+      "peak_kwh": 11.13,
+      "off_peak_kwh": 7.42,
+      "carbon_offset_kg": 3.71
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 15.99,
+      "peak_kwh": 9.6,
+      "off_peak_kwh": 6.4,
+      "carbon_offset_kg": 3.2
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 20.25,
+      "peak_kwh": 12.15,
+      "off_peak_kwh": 8.1,
+      "carbon_offset_kg": 4.05
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 17.52,
+      "peak_kwh": 10.51,
+      "off_peak_kwh": 7.01,
+      "carbon_offset_kg": 3.5
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 26.93,
+      "peak_kwh": 16.16,
+      "off_peak_kwh": 10.77,
+      "carbon_offset_kg": 5.39
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 16.03,
+      "peak_kwh": 9.62,
+      "off_peak_kwh": 6.41,
+      "carbon_offset_kg": 3.21
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 24.25,
+      "peak_kwh": 14.55,
+      "off_peak_kwh": 9.7,
+      "carbon_offset_kg": 4.85
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 24.01,
+      "peak_kwh": 14.4,
+      "off_peak_kwh": 9.6,
+      "carbon_offset_kg": 4.8
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 28.3,
+      "peak_kwh": 16.98,
+      "off_peak_kwh": 11.32,
+      "carbon_offset_kg": 5.66
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 25.76,
+      "peak_kwh": 15.46,
+      "off_peak_kwh": 10.31,
+      "carbon_offset_kg": 5.15
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 25.98,
+      "peak_kwh": 15.59,
+      "off_peak_kwh": 10.39,
+      "carbon_offset_kg": 5.2
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 25.83,
+      "peak_kwh": 15.5,
+      "off_peak_kwh": 10.33,
+      "carbon_offset_kg": 5.17
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 25.6,
+      "peak_kwh": 15.36,
+      "off_peak_kwh": 10.24,
+      "carbon_offset_kg": 5.12
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 20.41,
+      "peak_kwh": 12.25,
+      "off_peak_kwh": 8.16,
+      "carbon_offset_kg": 4.08
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 22.45,
+      "peak_kwh": 13.47,
+      "off_peak_kwh": 8.98,
+      "carbon_offset_kg": 4.49
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 23.24,
+      "peak_kwh": 13.94,
+      "off_peak_kwh": 9.3,
+      "carbon_offset_kg": 4.65
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 15.68,
+      "peak_kwh": 9.41,
+      "off_peak_kwh": 6.27,
+      "carbon_offset_kg": 3.14
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 27.53,
+      "peak_kwh": 16.52,
+      "off_peak_kwh": 11.01,
+      "carbon_offset_kg": 5.51
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 28.32,
+      "peak_kwh": 16.99,
+      "off_peak_kwh": 11.33,
+      "carbon_offset_kg": 5.66
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 28.1,
+      "peak_kwh": 16.86,
+      "off_peak_kwh": 11.24,
+      "carbon_offset_kg": 5.62
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0005",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 23.63,
+      "peak_kwh": 14.18,
+      "off_peak_kwh": 9.45,
+      "carbon_offset_kg": 4.73
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 17.21,
+      "peak_kwh": 10.32,
+      "off_peak_kwh": 6.88,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 19.51,
+      "peak_kwh": 11.71,
+      "off_peak_kwh": 7.8,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 21.35,
+      "peak_kwh": 12.81,
+      "off_peak_kwh": 8.54,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 25.82,
+      "peak_kwh": 15.49,
+      "off_peak_kwh": 10.33,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 24.46,
+      "peak_kwh": 14.67,
+      "off_peak_kwh": 9.78,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 17.2,
+      "peak_kwh": 10.32,
+      "off_peak_kwh": 6.88,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 20.18,
+      "peak_kwh": 12.11,
+      "off_peak_kwh": 8.07,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 26.46,
+      "peak_kwh": 15.88,
+      "off_peak_kwh": 10.59,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 19.27,
+      "peak_kwh": 11.56,
+      "off_peak_kwh": 7.71,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 23.91,
+      "peak_kwh": 14.34,
+      "off_peak_kwh": 9.56,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 23.01,
+      "peak_kwh": 13.8,
+      "off_peak_kwh": 9.2,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 20.54,
+      "peak_kwh": 12.33,
+      "off_peak_kwh": 8.22,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 21.42,
+      "peak_kwh": 12.85,
+      "off_peak_kwh": 8.57,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 19.47,
+      "peak_kwh": 11.68,
+      "off_peak_kwh": 7.79,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 16.82,
+      "peak_kwh": 10.09,
+      "off_peak_kwh": 6.73,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 24.52,
+      "peak_kwh": 14.71,
+      "off_peak_kwh": 9.81,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 24.99,
+      "peak_kwh": 15.0,
+      "off_peak_kwh": 10.0,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 22.92,
+      "peak_kwh": 13.75,
+      "off_peak_kwh": 9.17,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 16.26,
+      "peak_kwh": 9.76,
+      "off_peak_kwh": 6.51,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 19.94,
+      "peak_kwh": 11.96,
+      "off_peak_kwh": 7.97,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 14.77,
+      "peak_kwh": 8.86,
+      "off_peak_kwh": 5.91,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 16.9,
+      "peak_kwh": 10.14,
+      "off_peak_kwh": 6.76,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 20.0,
+      "peak_kwh": 12.0,
+      "off_peak_kwh": 8.0,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 22.42,
+      "peak_kwh": 13.45,
+      "off_peak_kwh": 8.97,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 21.67,
+      "peak_kwh": 13.0,
+      "off_peak_kwh": 8.67,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 26.61,
+      "peak_kwh": 15.96,
+      "off_peak_kwh": 10.64,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 26.85,
+      "peak_kwh": 16.11,
+      "off_peak_kwh": 10.74,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 17.81,
+      "peak_kwh": 10.69,
+      "off_peak_kwh": 7.12,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 19.01,
+      "peak_kwh": 11.4,
+      "off_peak_kwh": 7.6,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0006",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 26.02,
+      "peak_kwh": 15.61,
+      "off_peak_kwh": 10.41,
+      "carbon_offset_kg": 0.0
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 17.26,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.45
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 24.95,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.99
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 26.22,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.24
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 16.06,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.21
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 25.26,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.05
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 15.4,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.08
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 20.39,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.08
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 25.92,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.18
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 15.69,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.14
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 26.77,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.35
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 15.8,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.16
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 23.21,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.64
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 25.55,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.11
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 18.97,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.79
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 19.24,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.85
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 25.3,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.06
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 16.23,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.25
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 23.5,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.7
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 16.17,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.23
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 22.51,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.5
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 16.67,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.33
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 21.2,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.24
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 23.37,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.67
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 16.85,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.37
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 25.4,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.08
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 16.4,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.28
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 19.97,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.99
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 18.21,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.64
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 24.77,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 4.95
+    },
+    {
+      "customer_id": "CUST0001",
+      "contract_id": "CONT0007",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 19.48,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.9
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 6.59,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.63
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 7.45,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.98
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 5.69,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.28
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 4.98,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.99
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 6.89,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.76
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 5.02,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.01
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 4.38,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.75
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 5.13,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.05
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 6.75,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.7
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 6.58,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.63
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 7.54,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.01
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 7.55,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 3.02
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 4.73,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.89
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 7.05,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.82
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 5.84,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.34
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 4.53,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.81
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 4.79,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.92
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 4.74,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.89
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 6.21,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.49
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 4.56,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.82
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 6.72,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.69
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 6.51,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.6
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 4.44,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.78
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 7.41,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.96
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 5.21,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.09
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 4.22,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 1.69
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 5.65,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.26
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 6.69,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.67
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 7.06,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.83
+    },
+    {
+      "customer_id": "CUST0004",
+      "contract_id": "CONT0008",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 7.19,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 2.87
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-12T19:19:19.042909",
+      "total_kwh": 20.58,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 8.23
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-11T19:19:19.042909",
+      "total_kwh": 23.15,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.26
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-10T19:19:19.042909",
+      "total_kwh": 16.88,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 6.75
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-09T19:19:19.042909",
+      "total_kwh": 24.8,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.92
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-08T19:19:19.042909",
+      "total_kwh": 16.3,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 6.52
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-07T19:19:19.042909",
+      "total_kwh": 23.52,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.41
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-06T19:19:19.042909",
+      "total_kwh": 18.47,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 7.39
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-05T19:19:19.042909",
+      "total_kwh": 23.73,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.49
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-04T19:19:19.042909",
+      "total_kwh": 23.78,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.51
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-03T19:19:19.042909",
+      "total_kwh": 15.35,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 6.14
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-02T19:19:19.042909",
+      "total_kwh": 22.58,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.03
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-03-01T19:19:19.042909",
+      "total_kwh": 21.3,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 8.52
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-28T19:19:19.042909",
+      "total_kwh": 21.58,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 8.63
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-27T19:19:19.042909",
+      "total_kwh": 22.01,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 8.8
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-26T19:19:19.042909",
+      "total_kwh": 13.65,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.46
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-25T19:19:19.042909",
+      "total_kwh": 21.85,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 8.74
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-24T19:19:19.042909",
+      "total_kwh": 23.44,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.38
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-23T19:19:19.042909",
+      "total_kwh": 24.01,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.6
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-22T19:19:19.042909",
+      "total_kwh": 24.22,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.69
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-21T19:19:19.042909",
+      "total_kwh": 17.47,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 6.99
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-20T19:19:19.042909",
+      "total_kwh": 16.58,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 6.63
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-19T19:19:19.042909",
+      "total_kwh": 22.39,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 8.96
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-18T19:19:19.042909",
+      "total_kwh": 25.12,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 10.05
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-17T19:19:19.042909",
+      "total_kwh": 17.0,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 6.8
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-16T19:19:19.042909",
+      "total_kwh": 20.57,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 8.23
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-15T19:19:19.042909",
+      "total_kwh": 16.35,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 6.54
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-14T19:19:19.042909",
+      "total_kwh": 15.17,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 6.07
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-13T19:19:19.042909",
+      "total_kwh": 19.61,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 7.84
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-12T19:19:19.042909",
+      "total_kwh": 23.16,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 9.26
+    },
+    {
+      "customer_id": "CUST0003",
+      "contract_id": "CONT0009",
+      "date": "2025-02-11T19:19:19.042909",
+      "total_kwh": 14.82,
+      "peak_kwh": null,
+      "off_peak_kwh": null,
+      "carbon_offset_kg": 5.93
+    }
+  ],
+  "payment_methods": [
+    {
+      "id": "PAY0000",
+      "customer_id": "CUST0000",
+      "type": "PayNow",
+      "linked_to": "NRIC",
+      "is_default": true
+    },
+    {
+      "id": "PAY0001",
+      "customer_id": "CUST0001",
+      "type": "Credit Card",
+      "card_type": "American Express",
+      "last_four": "8299",
+      "expiry_date": "7/24",
+      "is_default": true
+    },
+    {
+      "id": "PAY0002",
+      "customer_id": "CUST0002",
+      "type": "GIRO",
+      "bank_name": "OCBC",
+      "account_last_four": "2545",
+      "is_default": false
+    },
+    {
+      "id": "PAY0003",
+      "customer_id": "CUST0002",
+      "type": "PayNow",
+      "linked_to": "Mobile Number",
+      "is_default": false
+    },
+    {
+      "id": "PAY0004",
+      "customer_id": "CUST0003",
+      "type": "GIRO",
+      "bank_name": "UOB",
+      "account_last_four": "5494",
+      "is_default": false
+    },
+    {
+      "id": "PAY0005",
+      "customer_id": "CUST0003",
+      "type": "Credit Card",
+      "card_type": "Visa",
+      "last_four": "2507",
+      "expiry_date": "8/26",
+      "is_default": true
+    },
+    {
+      "id": "PAY0006",
+      "customer_id": "CUST0004",
+      "type": "Credit Card",
+      "card_type": "MasterCard",
+      "last_four": "3988",
+      "expiry_date": "7/27",
+      "is_default": true
+    },
+    {
+      "id": "PAY0007",
+      "customer_id": "CUST0004",
+      "type": "Credit Card",
+      "card_type": "Visa",
+      "last_four": "2411",
+      "expiry_date": "6/23",
+      "is_default": false
+    }
+  ],
+  "sample_data": [
+    {
+      "Customer": "Muhammad Bin Abdullah",
+      "ID": "CUST0002",
+      "Phone": "+6583913161",
+      "Email": "muhammad@example.com",
+      "Address": "Block 161, #14-79, Singapore 691449",
+      "Appointments": [
+        {
+          "Service": "Contract Consultation",
+          "Date": "2025-03-26",
+          "Status": "Scheduled",
+          "Location": "JTC Summit (near Jurong East MRT Station)"
+        }
+      ],
+      "Contracts": [
+        {
+          "ID": "CONT0002",
+          "Plan": "Green Energy Plan",
+          "Term": "36 months",
+          "Rate": "$0.2574/kWh",
+          "Status": "Expired",
+          "Start Date": "2024-03-24",
+          "End Date": "2027-03-09",
+          "Auto Renewal": "No",
+          "Green Energy": "100%"
+        }
+      ],
+      "Billing": [
+        {
+          "Bill ID": "BILL0012",
+          "Date": "2025-03-12",
+          "Amount": "$107.46",
+          "Usage": "323.67 kWh",
+          "Status": "Overdue"
+        },
+        {
+          "Bill ID": "BILL0013",
+          "Date": "2025-02-10",
+          "Amount": "$134.76",
+          "Usage": "405.93 kWh",
+          "Status": "Unpaid"
+        },
+        {
+          "Bill ID": "BILL0014",
+          "Date": "2025-01-11",
+          "Amount": "$197.27",
+          "Usage": "594.19 kWh",
+          "Status": "Unpaid"
+        }
+      ],
+      "Usage": [
+        {
+          "Date": "2025-03-12",
+          "Usage": "9.62 kWh",
+          "Carbon Offset": "3.85 kg"
+        },
+        {
+          "Date": "2025-03-11",
+          "Usage": "13.13 kWh",
+          "Carbon Offset": "5.25 kg"
+        },
+        {
+          "Date": "2025-03-10",
+          "Usage": "12.28 kWh",
+          "Carbon Offset": "4.91 kg"
+        },
+        {
+          "Date": "2025-03-09",
+          "Usage": "7.57 kWh",
+          "Carbon Offset": "3.03 kg"
+        },
+        {
+          "Date": "2025-03-08",
+          "Usage": "11.05 kWh",
+          "Carbon Offset": "4.42 kg"
+        },
+        {
+          "Date": "2025-03-07",
+          "Usage": "13.69 kWh",
+          "Carbon Offset": "5.48 kg"
+        },
+        {
+          "Date": "2025-03-06",
+          "Usage": "12.49 kWh",
+          "Carbon Offset": "5.0 kg"
+        }
+      ],
+      "Payment Methods": [
+        {
+          "Type": "GIRO",
+          "Bank": "OCBC",
+          "Account": "ending in 2545",
+          "Default": "No"
+        },
+        {
+          "Type": "PayNow",
+          "Linked to": "Mobile Number",
+          "Default": "No"
+        }
+      ]
+    },
+    {
+      "Customer": "Raj Patel",
+      "ID": "CUST0004",
+      "Phone": "+6586378005",
+      "Email": "raj@example.com",
+      "Address": "Block 140, #5-70, Singapore 473489",
+      "Appointments": [
+        {
+          "Service": "Contract Consultation",
+          "Date": "2025-03-22",
+          "Status": "Scheduled",
+          "Location": "JTC Summit (near Jurong East MRT Station)"
+        },
+        {
+          "Service": "Bill Review",
+          "Date": "2025-03-16",
+          "Status": "Scheduled",
+          "Location": "JTC Summit (near Jurong East MRT Station)"
+        }
+      ],
+      "Contracts": [
+        {
+          "ID": "CONT0000",
+          "Plan": "Discount Off Tariff",
+          "Term": "24 months",
+          "Rate": "$0.2837/kWh",
+          "Status": "Renewed",
+          "Start Date": "2024-06-01",
+          "End Date": "2026-05-22",
+          "Auto Renewal": "Yes",
+          "Green Energy": "0%"
+        },
+        {
+          "ID": "CONT0001",
+          "Plan": "Fixed Price Plan",
+          "Term": "12 months",
+          "Rate": "$0.2073/kWh",
+          "Status": "Expired",
+          "Start Date": "2024-05-02",
+          "End Date": "2025-04-27",
+          "Auto Renewal": "No",
+          "Green Energy": "0%"
+        }
+      ],
+      "Billing": [
+        {
+          "Bill ID": "BILL0000",
+          "Date": "2025-03-12",
+          "Amount": "$53.93",
+          "Usage": "166.28 kWh",
+          "Status": "Overdue"
+        },
+        {
+          "Bill ID": "BILL0001",
+          "Date": "2025-02-10",
+          "Amount": "$58.96",
+          "Usage": "181.79 kWh",
+          "Status": "Overdue"
+        },
+        {
+          "Bill ID": "BILL0002",
+          "Date": "2025-01-11",
+          "Amount": "$81.31",
+          "Usage": "250.68 kWh",
+          "Status": "Unpaid"
+        },
+        {
+          "Bill ID": "BILL0006",
+          "Date": "2025-03-12",
+          "Amount": "$150.92",
+          "Usage": "603.45 kWh",
+          "Status": "Unpaid"
+        },
+        {
+          "Bill ID": "BILL0007",
+          "Date": "2025-02-10",
+          "Amount": "$163.88",
+          "Usage": "655.28 kWh",
+          "Status": "Overdue"
+        },
+        {
+          "Bill ID": "BILL0008",
+          "Date": "2025-01-11",
+          "Amount": "$241.99",
+          "Usage": "967.6 kWh",
+          "Status": "Paid"
+        }
+      ],
+      "Usage": [
+        {
+          "Date": "2025-03-12",
+          "Usage": "4.77 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-11",
+          "Usage": "4.24 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-10",
+          "Usage": "6.57 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-09",
+          "Usage": "5.12 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-08",
+          "Usage": "5.44 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-07",
+          "Usage": "6.46 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-06",
+          "Usage": "5.47 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-12",
+          "Usage": "22.16 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-11",
+          "Usage": "18.3 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-10",
+          "Usage": "23.17 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-09",
+          "Usage": "15.44 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-08",
+          "Usage": "23.41 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-07",
+          "Usage": "24.16 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-06",
+          "Usage": "21.75 kWh",
+          "Carbon Offset": "0.0 kg"
+        }
+      ],
+      "Payment Methods": [
+        {
+          "Type": "Credit Card",
+          "Card": "MasterCard ending in 3988",
+          "Expiry": "7/27",
+          "Default": "Yes"
+        },
+        {
+          "Type": "Credit Card",
+          "Card": "Visa ending in 2411",
+          "Expiry": "6/23",
+          "Default": "No"
+        }
+      ]
+    },
+    {
+      "Customer": "Wei Ling Tan",
+      "ID": "CUST0001",
+      "Phone": "+6583717440",
+      "Email": "wei@example.com",
+      "Address": "Block 345, #11-85, Singapore 912879",
+      "Appointments": [],
+      "Contracts": [
+        {
+          "ID": "CONT0005",
+          "Plan": "Peak/Off-Peak Plan",
+          "Term": "6 months",
+          "Rate": "$0.2211/kWh",
+          "Status": "Pending",
+          "Start Date": "2024-11-16",
+          "End Date": "2025-05-15",
+          "Auto Renewal": "No",
+          "Green Energy": "50%"
+        },
+        {
+          "ID": "CONT0006",
+          "Plan": "Peak/Off-Peak Plan",
+          "Term": "24 months",
+          "Rate": "$0.2044/kWh",
+          "Status": "Active",
+          "Start Date": "2024-07-10",
+          "End Date": "2026-06-30",
+          "Auto Renewal": "Yes",
+          "Green Energy": "0%"
+        }
+      ],
+      "Billing": [
+        {
+          "Bill ID": "BILL0026",
+          "Date": "2025-03-12",
+          "Amount": "$191.65",
+          "Usage": "654.58 kWh",
+          "Status": "Overdue"
+        },
+        {
+          "Bill ID": "BILL0027",
+          "Date": "2025-02-10",
+          "Amount": "$288.75",
+          "Usage": "986.19 kWh",
+          "Status": "Paid"
+        },
+        {
+          "Bill ID": "BILL0028",
+          "Date": "2025-01-11",
+          "Amount": "$396.33",
+          "Usage": "1353.65 kWh",
+          "Status": "Unpaid"
+        },
+        {
+          "Bill ID": "BILL0030",
+          "Date": "2025-03-12",
+          "Amount": "$136.63",
+          "Usage": "621.62 kWh",
+          "Status": "Overdue"
+        },
+        {
+          "Bill ID": "BILL0031",
+          "Date": "2025-02-10",
+          "Amount": "$131.17",
+          "Usage": "596.78 kWh",
+          "Status": "Unpaid"
+        },
+        {
+          "Bill ID": "BILL0032",
+          "Date": "2025-01-11",
+          "Amount": "$173.93",
+          "Usage": "791.29 kWh",
+          "Status": "Overdue"
+        }
+      ],
+      "Usage": [
+        {
+          "Date": "2025-03-12",
+          "Usage": "20.24 kWh",
+          "Carbon Offset": "4.05 kg"
+        },
+        {
+          "Date": "2025-03-11",
+          "Usage": "24.48 kWh",
+          "Carbon Offset": "4.9 kg"
+        },
+        {
+          "Date": "2025-03-10",
+          "Usage": "15.58 kWh",
+          "Carbon Offset": "3.12 kg"
+        },
+        {
+          "Date": "2025-03-09",
+          "Usage": "17.4 kWh",
+          "Carbon Offset": "3.48 kg"
+        },
+        {
+          "Date": "2025-03-08",
+          "Usage": "15.65 kWh",
+          "Carbon Offset": "3.13 kg"
+        },
+        {
+          "Date": "2025-03-07",
+          "Usage": "28.1 kWh",
+          "Carbon Offset": "5.62 kg"
+        },
+        {
+          "Date": "2025-03-06",
+          "Usage": "24.84 kWh",
+          "Carbon Offset": "4.97 kg"
+        },
+        {
+          "Date": "2025-03-12",
+          "Usage": "17.21 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-11",
+          "Usage": "19.51 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-10",
+          "Usage": "21.35 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-09",
+          "Usage": "25.82 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-08",
+          "Usage": "24.46 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-07",
+          "Usage": "17.2 kWh",
+          "Carbon Offset": "0.0 kg"
+        },
+        {
+          "Date": "2025-03-06",
+          "Usage": "20.18 kWh",
+          "Carbon Offset": "0.0 kg"
+        }
+      ],
+      "Payment Methods": [
+        {
+          "Type": "Credit Card",
+          "Card": "American Express ending in 8299",
+          "Expiry": "7/24",
+          "Default": "Yes"
+        }
+      ]
+    }
+  ]
+}

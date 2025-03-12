@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO
-import pyaudio
+import sounddevice as sd
+import numpy as np
 import asyncio
 import websockets
 import os
@@ -173,7 +174,6 @@ class VoiceAgent:
         self.ws = None
         self.is_running = False
         self.loop = None
-        self.audio = None
         self.stream = None
         self.input_device_id = None
         self.output_device_id = None
@@ -206,76 +206,68 @@ class VoiceAgent:
             logger.error(f"Failed to connect to Deepgram: {e}")
             return False
 
-    def audio_callback(self, input_data, frame_count, time_info, status_flag):
+    def audio_callback(self, indata, frames, time, status):
+        """This is called (from a separate thread) for each audio block."""
+        if status:
+            logger.warning(f"Audio callback status: {status}")
         if self.is_running and self.loop and not self.loop.is_closed():
             try:
+                # Convert numpy array to bytes
+                data = indata.tobytes()
                 future = asyncio.run_coroutine_threadsafe(
-                    self.mic_audio_queue.put(input_data), self.loop
+                    self.mic_audio_queue.put(data), self.loop
                 )
                 future.result(timeout=1)  # Add timeout to prevent blocking
             except Exception as e:
                 logger.error(f"Error in audio callback: {e}")
-        return (input_data, pyaudio.paContinue)
 
     async def start_microphone(self):
         try:
-            self.audio = pyaudio.PyAudio()
-
             # List available input devices
-            info = self.audio.get_host_api_info_by_index(0)
-            numdevices = info.get("deviceCount")
-            input_device_index = None
-
-            for i in range(0, numdevices):
-                device_info = self.audio.get_device_info_by_host_api_device_index(0, i)
-                if device_info.get("maxInputChannels") > 0:
-                    logger.info(f"Input Device {i}: {device_info.get('name')}")
-                    # Use selected device if available
-                    if (
-                        self.input_device_id
-                        and str(device_info.get("deviceId")) == self.input_device_id
-                    ):
-                        input_device_index = i
+            devices = sd.query_devices()
+            logger.info("Available audio devices:")
+            for i, device in enumerate(devices):
+                logger.info(f"Device {i}: {device['name']}")
+            
+            # Select input device
+            input_device = None
+            if self.input_device_id is not None:
+                for i, device in enumerate(devices):
+                    if str(device.get("index")) == self.input_device_id:
+                        input_device = i
                         break
-                    # Otherwise use first available device
-                    elif input_device_index is None:
-                        input_device_index = i
+            
+            # If no device was selected or found, use default
+            if input_device is None:
+                input_device = sd.default.device[0]
+                logger.info(f"Using default input device: {devices[input_device]['name']}")
+            else:
+                logger.info(f"Using selected input device: {devices[input_device]['name']}")
 
-            if input_device_index is None:
-                raise Exception("No input device found")
-
-            self.stream = self.audio.open(
-                format=pyaudio.paInt16,
+            # Start the input stream
+            self.stream = sd.InputStream(
+                samplerate=USER_AUDIO_SAMPLE_RATE,
+                blocksize=USER_AUDIO_SAMPLES_PER_CHUNK,
+                device=input_device,
                 channels=1,
-                rate=USER_AUDIO_SAMPLE_RATE,
-                input=True,
-                input_device_index=input_device_index,
-                frames_per_buffer=USER_AUDIO_SAMPLES_PER_CHUNK,
-                stream_callback=self.audio_callback,
+                dtype='int16',
+                callback=self.audio_callback
             )
-            self.stream.start_stream()
+            self.stream.start()
             logger.info("Microphone started successfully")
-            return self.stream, self.audio
+            return self.stream, None  # Return None as second value to maintain compatibility
         except Exception as e:
             logger.error(f"Error starting microphone: {e}")
-            if self.audio:
-                self.audio.terminate()
             raise
 
     def cleanup(self):
         """Clean up audio resources"""
         if self.stream:
             try:
-                self.stream.stop_stream()
+                self.stream.stop()
                 self.stream.close()
             except Exception as e:
                 logger.error(f"Error closing audio stream: {e}")
-
-        if self.audio:
-            try:
-                self.audio.terminate()
-            except Exception as e:
-                logger.error(f"Error terminating audio: {e}")
 
     async def sender(self):
         try:
@@ -440,7 +432,7 @@ class VoiceAgent:
 
         self.is_running = True
         try:
-            stream, audio = await self.start_microphone()
+            stream, _ = await self.start_microphone()
             await asyncio.gather(
                 self.sender(),
                 self.receiver(),
@@ -462,24 +454,39 @@ class Speaker:
         self._stop = None
 
     def __enter__(self):
-        audio = pyaudio.PyAudio()
-        self._stream = audio.open(
-            format=pyaudio.paInt16,
+        # Select output device
+        output_device = None
+        if hasattr(voice_agent, 'output_device_id') and voice_agent.output_device_id is not None:
+            devices = sd.query_devices()
+            for i, device in enumerate(devices):
+                if str(device.get("index")) == voice_agent.output_device_id:
+                    output_device = i
+                    break
+        
+        # If no device was selected or found, use default
+        if output_device is None:
+            output_device = sd.default.device[1]
+            
+        self._stream = sd.RawOutputStream(
+            samplerate=AGENT_AUDIO_SAMPLE_RATE,
+            blocksize=AGENT_AUDIO_SAMPLE_RATE // 10,  # 100ms blocks
+            device=output_device,
             channels=1,
-            rate=AGENT_AUDIO_SAMPLE_RATE,
-            input=False,
-            output=True,
+            dtype='int16'
         )
+        self._stream.start()
         self._queue = janus.Queue()
         self._stop = threading.Event()
         self._thread = threading.Thread(
             target=_play, args=(self._queue, self._stream, self._stop), daemon=True
         )
         self._thread.start()
+        return self
 
     def __exit__(self, exc_type, exc_value, traceback):
         self._stop.set()
         self._thread.join()
+        self._stream.stop()
         self._stream.close()
         self._stream = None
         self._queue = None
