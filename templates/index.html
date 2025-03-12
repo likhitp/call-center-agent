@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Voice Agent Debugger</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='syncscroll.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <button id="startButton" class="mic-button">Start Voice Agent</button>
+            <div id="status" class="status">Microphone: Not active</div>
+            <div class="audio-controls">
+                <div class="device-select">
+                    <label for="inputDevice">Input Device:</label>
+                    <select id="inputDevice"></select>
+                </div>
+            </div>
+            <div class="controls">
+                <label class="toggle">
+                    <input type="checkbox" id="showLogs">
+                    <span class="toggle-label">Show Logs</span>
+                </label>
+                <label class="toggle">
+                    <input type="checkbox" id="darkMode" checked>
+                    <span class="toggle-label">Dark Mode</span>
+                </label>
+            </div>
+            <div class="sample-data">
+                <h3>Sample Customer Data</h3>
+                <div class="sample-data-content">
+                    {% for customer in sample_data %}
+                    <div class="customer-card collapsed">
+                        <div class="customer-header">
+                            <div class="customer-info">
+                                <div><strong>{{ customer.Customer }}</strong></div>
+                                <div>ID: {{ customer.ID }}</div>
+                            </div>
+                            <div class="expand-icon">▼</div>
+                        </div>
+                        <div class="customer-details">
+                            <div class="customer-contact">
+                                <div>Phone: {{ customer.Phone }}</div>
+                                <div>Email: {{ customer.Email }}</div>
+                            </div>
+                            {% if customer.Appointments %}
+                            <div class="customer-appointments">
+                                <strong>Appointments:</strong>
+                                {% for apt in customer.Appointments %}
+                                <div>{{ apt.Service }} - {{ apt.Date }} ({{ apt.Status }})</div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            {% if customer.Orders %}
+                            <div class="customer-orders">
+                                <strong>Orders:</strong>
+                                {% for order in customer.Orders %}
+                                <div>{{ order.ID }}</div>
+                                <div>- Items: {{ order['# Items'] }}</div>
+                                <div>- Total: {{ order.Total }}</div>
+                                <div>- Status: {{ order.Status }}</div>
+                                <div>- Date: {{ order.Date }}</div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="columns-container">
+            <div id="conversation" class="timeline column">
+                <h2>Conversation</h2>
+                <div id="conversationMessages" class="syncscroll" name="timeline"></div>
+            </div>
+            <div id="logs" class="timeline column">
+                <h2>Logs</h2>
+                <div id="logMessages" class="syncscroll" name="timeline"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+        const startButton = document.getElementById('startButton');
+        const conversationMessages = document.getElementById('conversationMessages');
+        const logMessages = document.getElementById('logMessages');
+        const statusDiv = document.getElementById('status');
+        const showLogsToggle = document.getElementById('showLogs');
+        const logsColumn = document.getElementById('logs');
+        const inputSelect = document.getElementById('inputDevice');
+        let isActive = false;
+        let currentGroup = null;
+        let lastMessageTimestamp = null;
+        let messageCounter = 0;
+        const messageHeights = new Map(); // Store heights by counter
+        const messageOrder = []; // Keep track of message order
+
+        // Populate audio devices
+        async function loadAudioDevices() {
+            try {
+                // Request permission to access audio devices
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                
+                // Get the list of devices
+                const devices = await navigator.mediaDevices.enumerateDevices();
+                
+                // Stop the temporary stream
+                stream.getTracks().forEach(track => track.stop());
+                
+                // Clear existing options
+                inputSelect.innerHTML = '';
+                
+                // Add input devices
+                const inputDevices = devices.filter(device => device.kind === 'audioinput');
+                inputDevices.forEach(device => {
+                    const option = document.createElement('option');
+                    option.value = device.deviceId;
+                    option.text = device.label || `Microphone ${inputSelect.length + 1}`;
+                    inputSelect.appendChild(option);
+                });
+
+                console.log(`Found ${inputDevices.length} input devices`);
+            } catch (err) {
+                console.error('Error loading audio devices:', err);
+                statusDiv.textContent = 'Error: Could not access audio devices';
+            }
+        }
+
+        // Load devices initially and when devices change
+        navigator.mediaDevices.addEventListener('devicechange', loadAudioDevices);
+        loadAudioDevices();
+
+        // Send selected devices to server when starting
+        startButton.addEventListener('click', async () => {
+            if (!isActive) {
+                const hasPermission = await requestMicrophonePermission();
+                if (!hasPermission) {
+                    alert('Microphone permission is required for the voice agent to work.');
+                    return;
+                }
+
+                socket.emit('start_voice_agent', {
+                    inputDeviceId: inputSelect.value
+                });
+                startButton.textContent = 'Stop Voice Agent';
+                statusDiv.textContent = 'Microphone: Active';
+                isActive = true;
+            } else {
+                socket.emit('stop_voice_agent');
+                startButton.textContent = 'Start Voice Agent';
+                statusDiv.textContent = 'Microphone: Not active';
+                isActive = false;
+            }
+        });
+
+        async function requestMicrophonePermission() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                statusDiv.textContent = 'Microphone: Permission granted';
+                stream.getTracks().forEach(track => track.stop()); // Stop the stream as we don't need it yet
+                return true;
+            } catch (err) {
+                console.error('Error accessing microphone:', err);
+                statusDiv.textContent = 'Microphone: Permission denied';
+                return false;
+            }
+        }
+
+        function createSpacer(height) {
+            const spacer = document.createElement('div');
+            spacer.className = 'timeline-spacer';
+            spacer.style.height = `${height}px`;
+            return spacer;
+        }
+
+        function scrollToBottom() {
+            requestAnimationFrame(() => {
+                conversationMessages.scrollTop = conversationMessages.scrollHeight;
+                logMessages.scrollTop = logMessages.scrollHeight;
+            });
+        }
+
+        socket.on('conversation_update', (data) => {
+            const timestamp = data.timestamp || new Date().toISOString();
+            const currentCounter = messageCounter++;
+            messageOrder.push({ id: currentCounter, timestamp: timestamp, type: 'conversation' });
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `timeline-item message ${data.role}`;
+            messageDiv.textContent = `${data.role}: ${data.content}`;
+            messageDiv.dataset.messageId = currentCounter;
+            
+            insertTimelineItem(messageDiv, timestamp, conversationMessages);
+            
+            requestAnimationFrame(() => {
+                const actualHeight = messageDiv.offsetHeight;
+                messageHeights.set(currentCounter, actualHeight);
+                
+                const logSpacer = createSpacer(actualHeight);
+                logSpacer.dataset.messageId = currentCounter;
+                insertTimelineItem(logSpacer, timestamp, logMessages);
+                
+                if (!showLogsToggle.checked) {
+                    logSpacer.style.display = 'none';
+                    logSpacer.style.height = '0';
+                }
+                
+                syncscroll.reset();
+                scrollToBottom();
+            });
+        });
+
+        socket.on('log_message', (data) => {
+            const currentCounter = messageCounter++;
+            messageOrder.push({ id: currentCounter, timestamp: data.timestamp, type: 'log' });
+            
+            const logDiv = document.createElement('div');
+            logDiv.className = 'timeline-item log-message';
+            logDiv.setAttribute('data-original-text', data.message);
+            logDiv.innerHTML = convertAnsiToHtml(data.message);
+            logDiv.dataset.messageId = currentCounter;
+            
+            insertTimelineItem(logDiv, data.timestamp, logMessages);
+            
+            requestAnimationFrame(() => {
+                const actualHeight = logDiv.offsetHeight;
+                messageHeights.set(currentCounter, actualHeight);
+                
+                const conversationSpacer = createSpacer(actualHeight);
+                conversationSpacer.dataset.messageId = currentCounter;
+                insertTimelineItem(conversationSpacer, data.timestamp, conversationMessages);
+                
+                if (!showLogsToggle.checked) {
+                    conversationSpacer.style.display = 'none';
+                    conversationSpacer.style.height = '0';
+                }
+                
+                syncscroll.reset();
+                scrollToBottom();
+            });
+        });
+
+        function insertTimelineItem(element, timestamp, container) {
+            const time = new Date(timestamp);
+            
+            // Find the correct position to insert the new element
+            const items = container.children;
+            let insertPosition = container.childNodes.length;
+            
+            for (let i = 0; i < items.length; i++) {
+                const itemTime = new Date(items[i].dataset.timestamp);
+                if (time < itemTime) {
+                    insertPosition = i;
+                    break;
+                }
+            }
+            
+            element.dataset.timestamp = timestamp;
+            
+            if (insertPosition === container.childNodes.length) {
+                container.appendChild(element);
+            } else {
+                container.insertBefore(element, items[insertPosition]);
+            }
+        }
+
+        function convertAnsiToHtml(text) {
+            const ansiToHtml = {
+                // Dark mode colors
+                dark: {
+                    '[38;5;231m': 'color: #fff;',     // WHITE
+                    '[38;5;116m': 'color: #87d7d7;',  // BLUE
+                    '[38;5;114m': 'color: #87d787;',  // GREEN
+                    '[38;5;183m': 'color: #d7afff;',  // VIOLET
+                    '[38;5;186m': 'color: #d7d787;',  // YELLOW
+                },
+                // Light mode colors (darker variants)
+                light: {
+                    '[38;5;231m': 'color: #000;',     // BLACK
+                    '[38;5;116m': 'color: #0086b3;',  // BLUE
+                    '[38;5;114m': 'color: #008744;',  // GREEN
+                    '[38;5;183m': 'color: #8b3d90;',  // VIOLET
+                    '[38;5;186m': 'color: #b36d00;',  // YELLOW
+                },
+                // Reset is the same for both
+                '[0m': ''
+            };
+
+            // First remove all reset codes from the text
+            let html = text.replace(/\[0m/g, '');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            const colorSet = isDarkMode ? ansiToHtml.dark : ansiToHtml.light;
+
+            for (const [ansi, style] of Object.entries(colorSet)) {
+                const parts = html.split(ansi);
+                if (parts.length > 1) {
+                    html = parts.map((part, i) => {
+                        if (i === 0) return part;
+                        return `<span style="${style}">${part}</span>`;
+                    }).join('');
+                }
+            }
+
+            return html;
+        }
+
+        socket.on('connect', () => {
+            console.log('Connected to server');
+        });
+
+        socket.on('disconnect', () => {
+            console.log('Disconnected from server');
+            isActive = false;
+            startButton.textContent = 'Start Voice Agent';
+            statusDiv.textContent = 'Microphone: Not active';
+        });
+
+        socket.on('error', (error) => {
+            console.error('Socket error:', error);
+            alert('An error occurred. Please check the console for details.');
+        });
+
+        showLogsToggle.addEventListener('change', () => {
+            logsColumn.style.display = showLogsToggle.checked ? 'flex' : 'none';
+            
+            if (showLogsToggle.checked) {
+                // Process messages in chronological order
+                messageOrder.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+                
+                // First reset all spacers
+                const allSpacers = document.querySelectorAll('.timeline-spacer');
+                allSpacers.forEach(spacer => {
+                    spacer.style.display = 'block';
+                    const messageId = spacer.dataset.messageId;
+                    const height = messageHeights.get(parseInt(messageId));
+                    if (height) {
+                        spacer.style.height = `${height}px`;
+                    }
+                });
+                
+                messageOrder.forEach(message => {
+                    const height = messageHeights.get(message.id);
+                    if (height) {
+                        const logItem = logMessages.querySelector(`[data-message-id="${message.id}"]`);
+                        const conversationItem = conversationMessages.querySelector(`[data-message-id="${message.id}"]`);
+                        
+                        if (logItem && conversationItem) {
+                            if (message.type === 'log') {
+                                logItem.style.display = 'block';
+                                if (conversationItem.classList.contains('timeline-spacer')) {
+                                    conversationItem.style.display = 'block';
+                                    conversationItem.style.height = `${height}px`;
+                                }
+                            } else {
+                                conversationItem.style.display = 'block';
+                                if (logItem.classList.contains('timeline-spacer')) {
+                                    logItem.style.display = 'block';
+                                    logItem.style.height = `${height}px`;
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                requestAnimationFrame(() => {
+                    syncscroll.reset();
+                });
+            } else {
+                const allSpacers = document.querySelectorAll('.timeline-spacer');
+                allSpacers.forEach(spacer => {
+                    spacer.style.display = 'none';
+                    spacer.style.height = '0';
+                });
+            }
+        });
+
+        // Initialize logs visibility
+        logsColumn.style.display = showLogsToggle.checked ? 'flex' : 'none';
+
+        const darkModeToggle = document.getElementById('darkMode');
+        
+        // Initialize theme
+        document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+        
+        // Theme toggle handler
+        darkModeToggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+            
+            // Save preference
+            localStorage.setItem('darkMode', darkModeToggle.checked);
+            
+            // Reprocess all log messages with new colors
+            const logMessages = document.querySelectorAll('.timeline-item.log-message');
+            logMessages.forEach(logMessage => {
+                const originalText = logMessage.getAttribute('data-original-text');
+                if (originalText) {
+                    logMessage.innerHTML = convertAnsiToHtml(originalText);
+                }
+            });
+        });
+        
+        // Load saved preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode !== null) {
+                const isDarkMode = savedDarkMode === 'true';
+                darkModeToggle.checked = isDarkMode;
+                document.body.classList.toggle('dark-mode', isDarkMode);
+            }
+        });
+
+        function toggleCustomer(card) {
+            const wasCollapsed = card.classList.contains('collapsed');
+            
+            // First collapse all cards
+            document.querySelectorAll('.customer-card').forEach(otherCard => {
+                otherCard.classList.add('collapsed');
+            });
+            
+            // Then expand the clicked card if it was collapsed
+            if (wasCollapsed) {
+                card.classList.remove('collapsed');
+            }
+        }
+
+        // Initialize all cards as collapsed
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.customer-card');
+            cards.forEach(card => {
+                card.classList.add('collapsed');
+                // Add click handler to entire card
+                card.addEventListener('click', () => toggleCustomer(card));
+            });
+        });
+    </script>
+</body>
+</html>

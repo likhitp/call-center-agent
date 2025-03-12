@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: flask-agent
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    
+    # Install system dependencies
+    preInstallCommand: |
+      apt-get update -y && 
+      apt-get install -y portaudio19-dev python3-pyaudio
