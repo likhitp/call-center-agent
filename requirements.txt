@@ -1,0 +1,18 @@
+# Web framework and socket communication
+flask==3.0.0
+flask-socketio==5.3.6
+
+# Asynchronous programming
+websockets==12.0
+janus==1.0.0
+
+# Audio processing
+sounddevice>=0.5.1
+numpy>=1.20.0
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Additional dependencies that might be needed based on imports
+# These are not in pyproject.toml but appear to be used in the code
+colorlog>=6.0.0 
