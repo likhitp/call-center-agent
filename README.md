@@ -136,13 +136,6 @@ Key settings in `config.py`:
 - `MOCK_DATA_SIZE`: Control size of generated test data
 
 
-## Issue Reporting
-
-If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Security Policy](./SECURITY.md) details the procedure for contacting Deepgram.
-
-## Author
-
-[Deepgram](https://deepgram.com)
 
 ## License
 
